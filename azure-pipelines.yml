@@ -3,10 +3,11 @@ trigger:
 
 variables:
   buildConfiguration: 'Release'
-  leaderboardRepository: 'leaderboard'
-  webRepository: 'web'
+  leaderboardRepository: 'rajaksdemo.azureacr.io'
+  webRepository: 'tailspinspacegameweb'
   tag: '$(Build.BuildId)'
   imagePullSecret: 'secret'
+  RegistryName: 'rajaksdemo.azureacr.io'
 
 stages:
 - stage: 'Build'
