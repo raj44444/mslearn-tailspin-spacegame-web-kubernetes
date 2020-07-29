@@ -82,4 +82,3 @@ stages:
               containers: |
                 $(RegistryName)/$(webRepository):$(tag)
                 $(RegistryName)/$(leaderboardRepository):$(tag)
-   
