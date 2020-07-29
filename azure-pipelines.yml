@@ -1,14 +1,11 @@
 trigger:
 - 'master'
-
 variables:
   buildConfiguration: 'Release'
-  leaderboardRepository: 'rajaksdemo.azureacr.io'
-  webRepository: 'tailspinspacegameweb'
+  leaderboardRepository: 'leaderboard'
+  webRepository: 'web'
   tag: '$(Build.BuildId)'
-  imagePullSecret: 'secret'
-  RegistryName: 'rajaksdemo.azureacr.io'
-
+  imagePullSecret: 'gamesecret'
 stages:
 - stage: 'Build'
   displayName: 'Build and push'
@@ -50,7 +47,6 @@ stages:
     displayName: Deploy
     pool:
       vmImage: 'ubuntu-18.04'
-    
     environment: 'spike.default'
     variables:
     - group: Release
