@@ -17,6 +17,8 @@ spec:
           image: tailspinspacegame27632.azurecr.io/web
           ports:
           - containerPort: 80
+        imagePullSecrets:
+        - name: gamesecret
 ---
 apiVersion : apps/v1
 kind: Deployment
@@ -37,3 +39,5 @@ spec:
           image: tailspinspacegame27632.azurecr.io/leaderboard
           ports:
           - containerPort: 80
+        imagePullSecrets:
+        - name: gamesecret
